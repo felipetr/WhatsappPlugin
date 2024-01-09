@@ -48,7 +48,7 @@ function FTWhatsappPluginFloat() {
 }
 </style>
 
-<a href="<?php echo $url; ?>" class="FTWhatsappPluginFloat">
+<a target="_blank" href="<?php echo $url; ?>" class="FTWhatsappPluginFloat">
 <svg
    viewBox="0 0 448 512"
    version="1.1"
