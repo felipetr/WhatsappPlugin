@@ -1,30 +1,4 @@
-<?php
-/**
- * @package WhatsAppPlugin
- * @version 0.5
- */
-/*
-Plugin Name: WhatsAppPlugin
-Plugin URI: https://github.com/felipetr/WhatsappPlugin
-Description: Plugin WordPress de Link Flutuante de Whatsapp
-Author: Felipe Travassos
-Version: 0.
-Author URI: https://github.com/felipetr/
-*/
-
-
-
-
-
-function FTWhatsappPluginFloat() {
-    
-    $telefone = "5581995176564";
-    $mensagem = "Olá, vim pelo site e queria um orçamento";
-    $mensagem = str_replace(' ',"%20",$mensagem);
-    $url = 'https://api.whatsapp.com/send?phone='.$telefone.'&text='.$mensagem;
-
-    ?>
-    <style>
+<style>
 .FTWhatsappPluginFloat
 {
     position: fixed;
@@ -36,19 +10,14 @@ function FTWhatsappPluginFloat() {
     display: inline-block;
     padding: 10px;
     border-radius: 40px 40px 0 40px;
-    height: 30px;
-    z-index: 99999;
- 
 }
 .FTWhatsappPluginFloat svg
 {
    width: 30px;
-   position: relative;
-    top: -1px;
 }
 </style>
 
-<a href="<?php echo $url; ?>" class="FTWhatsappPluginFloat">
+<a href="#" class="FTWhatsappPluginFloat">
 <svg
    viewBox="0 0 448 512"
    version="1.1"
@@ -85,6 +54,3 @@ function FTWhatsappPluginFloat() {
      style="fill:#ffffff" />
 </svg>
 </a>
-    <?php
-}
-add_action( 'wp_footer', 'FTWhatsappPluginFloat' );
